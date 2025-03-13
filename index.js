@@ -7,14 +7,53 @@ var allbooks = data.length
 const readbooks = data.filter(checkRead);
 
 function checkRead (read){
-    console.log(read)
-    return read;
+    console.log(read["read?"]);
+    if("Yes" == read["read?"]){
+        return read;
+    }
 }
 
-checkRead;
+console.log(readbooks.length)
+
+console.log(readbooks.length / data.length);
+
+// math to be done to find the percentage 707/1558
 
 //1\\\
 
 // fetch('./rawBooks.json')
 //     .then((response) => response.json())
 //     .then((json) => console.log(json));
+
+
+//2\\ how many have audio books
+
+
+console.log(data.length);
+
+data.length 
+var allbooks = data.length
+
+const audiobooks = data.filter(audio);
+
+function audio (read){
+    console.log(read["audio?"]);
+    if("Yes" == read["audio?"]){
+        return read;
+    }
+}
+console.log ("****QUESTION 2***")
+
+console.log (audiobooks.length);
+
+//STEP 1: figure out how many diff genere's / 2 couting how many books are in each genre 3 figure out which one has the most
+
+const uniqueData = []
+data.forEach(item => {
+    if (!uniqueData.includes(item ["category"])) {
+        uniqueData.push(item["category"])
+    }
+})
+
+
+console.log(uniqueData) 
