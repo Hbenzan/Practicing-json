@@ -55,5 +55,19 @@ data.forEach(item => {
     }
 })
 
+const counts = []
 
-console.log(uniqueData) 
+for (let i = 0; i < uniqueData.length; i++) {
+    console.log (uniqueData[i]);
+const fantasy = data.filter(item => {
+    if (item["category"] === uniqueData[i]) {
+        return(item);
+    }
+});
+console.log (fantasy.length);
+
+
+//uniqueData.forE
+
+//console.log(uniqueData) 
+}
